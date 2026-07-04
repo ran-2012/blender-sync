@@ -1,8 +1,8 @@
 bl_info = {
     "name": "Blender Sync",
-    "author": "Blender Sync Contributors",
+    "author": "Ran",
     "version": (0, 1, 0),
-    "blender": (4, 0, 0),
+    "blender": (5, 0, 0),
     "location": "3D View > Sidebar > Blender Sync",
     "description": "Sync Blender settings, addons, and presets across devices via Git",
     "category": "System",

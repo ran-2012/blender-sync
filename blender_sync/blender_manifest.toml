@@ -1,0 +1,56 @@
+schema_version = "1.0.0"
+
+id = "ran_blender_settings_sync"
+version = "0.1.0"
+name = "Blender Settings Sync"
+tagline = "Sync Blender settings across devices via Git"
+maintainer = "Ran"
+type = "add-on"
+
+website = "https://github.com/your-org/blender-sync"
+tags = ["System"]
+
+blender_version_min = "5.0.0"
+
+license = ["SPDX:GPL-3.0-or-later"]
+
+# Platforms: add more after testing
+platforms = ["windows-x64"] # , "macos-arm64", "linux-x64"]
+
+# Permissions required
+[permissions]
+network = "Sync settings to and from a Git remote"
+files = "Read and write Blender configuration and addons"
+
+# Build: exclude dev files from the .zip
+[build]
+paths_exclude_pattern = [
+  "__pycache__/",
+  "*.pyc",
+  "*.pyo",
+  ".git",
+  ".github",
+  ".vscode",
+  "*.zip",
+  "docs",
+  "openspec",
+  "scripts",
+  "DEV.md",
+  "AGENTS.md",
+  ".gitignore",
+  ".gitattributes",
+  ".openspec.yaml",
+]
+# # For each permission it is important to also specify the reason why it is required.
+# # Keep this a single short sentence without a period (.) at the end.
+# # For longer explanations use the documentation or detail page.
+#
+# clipboard = "Copy and paste bone transforms"
+
+# # Optional: advanced build settings.
+# # https://docs.blender.org/manual/en/dev/advanced/extensions/command_line_arguments.html#command-line-args-extension-build
+# # paths_exclude_pattern = [
+# #   "__pycache__/",
+# #   "/.git/",
+# #   "/*.zip",
+# # ]
